@@ -39,12 +39,14 @@ Make both scripts executable by running the following commands in your terminal:
 - ```chmod +x ~/bootup.sh```
 
 - ```sudo ./rasptools.sh``` - to install the necessary tools
+- **Before creating your service file and adding your ```bootup.sh``` to it as shown in the step below. Make sure you change the IP and Port variables to your Public C2 Adress n Port.**
+
 
 ## 3. Create a Systemd Service for the Bootup Script
 Set up a new systemd service to automate the execution of your bootup script:
 - ```sudo nano /etc/systemd/system/my_script.service```
 
-Copy and paste the following configuration into the service file:
+Copy and paste the following configuration into the service file: **Remember to change "ExecStart=" to the path of your script**
 
 ```
 [Unit]
