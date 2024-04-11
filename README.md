@@ -31,19 +31,19 @@ Drawing inspiration from Episode 2 at timestamp: 13:37 ;) "Hackad" documentary f
 
 ## 1. Install Raspberry Pi OS and Download Scripts
 - Begin by installing Raspberry Pi OS on your device.
-- Download the scripts `bootup.sh` and `rasptools.sh` to your Pi.
+- Download the scripts `callback.sh` and `rasptools.sh` to your Pi.
 
 ## 2. Make Scripts Executable
 Make both scripts executable by running the following commands in your terminal:
 - ```chmod +x ~/rasptools.sh```
-- ```chmod +x ~/bootup.sh```
+- ```chmod +x ~/callback.sh```
 
 - ```sudo ./rasptools.sh``` - to install the necessary tools
-- **Before creating your service file and adding your ```bootup.sh``` to it as shown in the step below. Make sure you change the IP and Port variables to your Public C2 Adress n Port.**
+- **Before creating your service file and adding your ```callback.sh``` to it as shown in the step below. Make sure you change the IP and Port variables to your Public C2 Adress n Port.**
 
 
-## 3. Create a Systemd Service for the Bootup Script
-Set up a new systemd service to automate the execution of your bootup script:
+## 3. Create a Systemd Service for the callback Script
+Set up a new systemd service to automate the execution of your callback script:
 - ```sudo nano /etc/systemd/system/my_script.service```
 
 Copy and paste the following configuration into the service file: **Remember to change "ExecStart=" to the path of your script**
@@ -55,7 +55,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=~/pathtoyourscript/bootup.sh
+ExecStart=~/pathtoyourscript/callback.sh
 Restart=on-failure
 
 [Install]
@@ -76,6 +76,6 @@ For this a simple azure vm is needed and it's pretty easy to setup. Just make su
 **C2 Server**
 - ```nc -lvnp 4444```
 
-Now all you got to do is to restart the PI and try if the script runs on bootup. You can try out the script manually also if you want to. Without needing a reboot. But always make sure that it works on the reboot.
+Now all you got to do is to restart the PI and try if the script runs on boot. You can try out the script manually also if you want to without restarting ```sudo chmod +x /callback.sh``` and then ``` sudo callback.sh``` without having reboot. But always make sure that it works on the reboot afterwards.
 
 
