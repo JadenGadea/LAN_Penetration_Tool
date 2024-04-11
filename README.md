@@ -1,10 +1,11 @@
 ![Documentary_image](SVT_Hackad.png)
-
 # Raspberrrypi_Pentest_Tool
 
-**What does it do? It's a gadget I built that sneaks into a local network and then phones home to my server. You might have seen it on "Hackad" – that Swedish TV show. They showed off the hardware, but not how it's done. I figured that part out on my own, and you can see it in action in the episode I've linked below.**
+### This repository's content is shared strictly for educational purposes, aimed at fostering understanding and development of defensive strategies against these kinds of potential cyber threats. The creator does not endorse nor encourage the misuse of this information in any manner. Responsibility for the use of this knowledge rests solely with the user. The creator assumes no liability for actions taken by others based on this content.
 
-Drawing inspiration from Episode 2 at time 13:37 "Hackad" documentary featured on SVT Play. The particular episode that sparked this venture, "Att kidnappa ett företag" https://www.svtplay.se/video/8M3RbJP/hackad/2-kan-man-hacka-en-stad?info=visa
+**What does it do? It's a gadget I built that sneaks into a local network and then phones home to my server. You might have seen it on "Hackad" – that Swedish TV show. They showed off the hardware. I figured that part out on my own, and you can see it in action in the episode I've linked below.**
+
+Drawing inspiration from Episode 2 at timestamp: 13:37 ;) "Hackad" documentary featured on SVT Play. The particular episode that sparked this venture, "Kan man hacka en stad" https://www.svtplay.se/video/8M3RbJP/hackad/2-kan-man-hacka-en-stad?info=visa
 
 #### Features:
 **Custom Scripting:** At the heart of the toolkit lies two scripts tailored to download all the necessary tools, and another to connect back to the C2 server after internet connection has been established.
